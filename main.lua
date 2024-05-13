@@ -15,6 +15,7 @@ function love.update(dt)
     Bars:update(dt)
     for _,ball in ipairs(ActiveBalls) do
         for _,bar in ipairs(ActiveBar) do
+            print(ball.xVel)
             if BoxsCollisions(ball.x,ball.y,ball.width,ball.height,bar.x,bar.y,bar.width,bar.height) then
                 ball.yVel = ball.yVel * -1
                 if ball.xVel > 0 and ball.x > bar.x and ball.x < bar.x + bar.width/2 then

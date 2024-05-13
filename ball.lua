@@ -17,7 +17,7 @@ end
 function Balls:update(dt)
     for i , ball in ipairs(ActiveBalls) do
         if ball.x + ball.width > Window.width or ball.x < 0 then
-            ball.xVel = (ball.xVel * -1)
+            ball.xVel = ball.xVel * -1
         end
         if ball.y < 0 then
             ball.yVel = ball.yVel * -1
